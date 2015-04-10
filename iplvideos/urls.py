@@ -12,7 +12,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     (r'^sample/', sample_view),
-    (r'^app/', include('myapp.urls'))
+    (r'^', include('myapp.urls'))
 )
 
 urlpatterns += staticfiles_urlpatterns()
