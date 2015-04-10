@@ -1,6 +1,8 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from myapp.views import sample_view
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 
 urlpatterns = patterns('',
@@ -12,3 +14,5 @@ urlpatterns = patterns('',
     (r'^sample/', sample_view),
     (r'^app/', include('myapp.urls'))
 )
+
+urlpatterns += staticfiles_urlpatterns()
